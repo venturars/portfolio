@@ -1,0 +1,25 @@
+/* Page decorations — top-right square, bottom-right corner notch */
+
+.page {
+  @apply relative;
+}
+
+.page__decoration-top {
+  @apply fixed -rotate-65 bg-neutral-dark w-24 h-24 -top-6 -right-6 sm:w-32 sm:h-32 sm:-top-10 sm:-right-10 lg:w-36 lg:h-36 lg:-top-12 lg:-right-12;
+}
+
+.page__decoration-bottom {
+  @apply fixed bottom-0 right-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 pointer-events-none;
+}
+
+.page__decoration-bottom-triangle {
+  @apply absolute border-solid;
+}
+
+.page__decoration-bottom-triangle--bottom {
+  @apply rotate-45 -bottom-14 sm:-bottom-20 lg:-bottom-22 left-0 border-t-0 border-r-48 border-b-96 border-l-48 border-t-transparent border-r-transparent border-b-neutral-dark border-l-transparent sm:border-r-64 sm:border-b-128 sm:border-l-64 lg:border-r-80 lg:border-b-160 lg:border-l-80;
+}
+
+.page__decoration-bottom-triangle--right {
+  @apply -rotate-45 top-0 -right-14 sm:-right-20 lg:-right-22 border-t-48 border-r-96 border-b-48 border-l-0 border-t-transparent border-r-neutral-dark border-b-transparent border-l-transparent sm:border-t-64 sm:border-r-128 sm:border-b-64 lg:border-t-80 lg:border-r-160 lg:border-b-80;
+}

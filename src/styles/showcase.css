@@ -1,0 +1,40 @@
+/* ShowcaseYouTube & ShowcaseImage styles */
+
+.content-panel .card-grid:has(.starlight-showcases-media-card) {
+  @apply grid-cols-1;
+}
+
+/* ShowcaseImage grid — full width for media cards */
+.content-panel .card-grid:has(.starlight-showcases-media-card) > div {
+  @apply w-full;
+  grid-template-columns: 1fr;
+}
+
+.content-panel .starlight-showcases-media-card {
+  @apply flex flex-col w-full bg-neutral text-dark border-0 rounded-xl overflow-hidden shadow-sm no-underline;
+}
+
+.content-panel a.starlight-showcases-media-card:hover {
+  @apply bg-light border-neutral-dark;
+}
+
+.content-panel .starlight-showcases-media-asset {
+  @apply block overflow-hidden w-full;
+}
+
+.content-panel .starlight-showcases-media-asset img,
+.content-panel .starlight-showcases-media-asset :global(iframe) {
+  @apply block w-full min-w-full max-w-full h-auto aspect-video object-cover;
+}
+
+.content-panel .starlight-showcases-media-infos {
+  @apply flex flex-col gap-2 py-3 px-4 border-t border-neutral-dark;
+}
+
+.content-panel .starlight-showcases-media-title {
+  @apply font-lato text-dark font-semibold text-base leading-tight m-0;
+}
+
+.content-panel .starlight-showcases-media-description {
+  @apply font-lato text-dark text-sm leading-normal m-0;
+}

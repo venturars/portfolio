@@ -1,0 +1,19 @@
+/* Previous / Next pagination buttons */
+
+.pagination-links a {
+  @apply bg-neutral border-neutral-dark text-secondary;
+}
+
+.pagination-links a:hover,
+.pagination-links a:focus {
+  @apply text-accent bg-light border-accent;
+}
+
+.pagination-links .link-title {
+  @apply font-playfair text-secondary;
+}
+
+.pagination-links a:hover .link-title,
+.pagination-links a:focus .link-title {
+  @apply text-accent;
+}

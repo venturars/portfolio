@@ -1,0 +1,14 @@
+/* Main styles entry point — imports all styles */
+@import "./theme.css";
+@import "./global.css";
+@import "./base.css";
+@import "./page.css";
+@import "./social.css";
+@import "./hero.css";
+@import "./buttons.css";
+@import "./links.css";
+@import "./navbar.css";
+@import "./sidebar.css";
+@import "./search.css";
+@import "./pagination.css";
+@import "./showcase.css";

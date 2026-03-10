@@ -1,40 +1,126 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Ventura Rodríguez
+description: Web & Web3 Specialist
+tableOfContents: false
+
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  title: Building reliable, maintainable, and product-focused software
+  tagline: Web & Web3 Specialist | End-to-End Product Development
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/Ventura_003.jpg
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: Explore my work
+      link: /professional-project/beraborrow-yarifi/
+      icon: open-book
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkButton } from "@astrojs/starlight/components";
 
-## Next steps
-
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+<div class="page">
+  <div class="page__decoration-top" aria-hidden="true" />
+  <div class="page__decoration-bottom" aria-hidden="true">
+    <span class="page__decoration-bottom-triangle page__decoration-bottom-triangle--bottom" />
+    <span class="page__decoration-bottom-triangle page__decoration-bottom-triangle--right" />
+  </div>
+  <div class="prose prose-xl">
+    <div class="pb-8">
+      Here you'll find a considered selection of my work and experiences. Each
+      case is presented with context and a clear explanation of my contribution.
+      The intention is not only to showcase the outcomes, but also to provide
+      insight into how I approach decisions, balance technical execution with
+      product intent, and deliver meaningful value through each iteration.
+    </div>
+    <h4>How I work</h4>
+    <div>
+      Over time, my approach to development has been shaped by working within
+      real product environments, balancing technical ambition with practical
+      constraints.
+    </div>
+    <div>
+      Decisions are made in alignment with the realities of the product and the
+      team, considering timelines, technical capacity, and both existing and
+      potential technical debt.
+    </div>
+    <div>
+      When changes introduce breaking implications, transitions are approached
+      progressively rather than through abrupt replacement, maintaining legacy
+      paths when needed to support continuity.
+    </div>
+    <div>
+      Relevant decisions are documented, and technical documentation is updated
+      when it contributes to long-term clarity. Architectural choices are shaped
+      by the team's capabilities and delivery constraints, rather than by
+      idealised models.
+    </div>
+    <div>
+      For new features, architecture changes, or significant fixes, design notes
+      are introduced when appropriate, without adding unnecessary process
+      overhead.
+    </div>
+    <div>
+      Implementation and architecture evolve in response to the product's
+      circumstances, not in isolation from them.
+    </div>
+    <h4>My Scope</h4>
+    <div>
+      I contribute across the full lifecycle of digital products, from initial
+      development to evolution, maintenance, and even deprecation. Understanding
+      the product's stage is key to making decisions that deliver meaningful
+      value.
+    </div>
+    <div>
+      Within this ecosystem, I have worked across multiple areas:
+      <ul class="list-disc pl-4">
+        <li>
+          <strong>Frontend & UX:</strong> interfaces, state management,
+          reactivity, performance, hybrid SSR systems, CMS, and data
+          presentation.
+        </li>
+        <li>
+          <strong>APIs & Backend:</strong> service CRUD APIs for frontend
+          consumption, internal business logic, caching, integrations with
+          external collaborators, relational and non-relational databases, and
+          SDKs to abstract smart contract logic and internal services, enabling
+          both internal systems and external collaborators to communicate
+          efficiently through the product.
+        </li>
+        <li>
+          <strong>Smart Contracts:</strong> integrating and developing smart
+          contracts, including NFTs and peripheral contracts such as on-chain
+          price oracles, as well as programming interfaces that enable other
+          products to interact seamlessly with our system.
+        </li>
+        <li>
+          <strong>Subgraphs & Automation:</strong> developing, scaling, and
+          maintaining subgraphs, as well as off-chain bots and oracles for
+          liquidations, rebalances, swaps, price updates, and reporting via
+          Telegram and Discord.
+        </li>
+        <li>
+          <strong>Product Evolution & Multi-brand Deployments:</strong>
+          contributing to multichain transitions, implementing white-label
+          architectures, and adapting logic for multiple brands.
+        </li>
+        <li>
+          <strong>Maintenance & Debugging:</strong> handling user tickets,
+          troubleshooting, and applying advanced debugging and simulation tools.
+        </li>
+      </ul>
+    </div>
+    <div class="mt-16 pt-16 border-t-2 border-neutral-dark/30 flex flex-col items-center gap-2 text-center">
+      <div class="text-primary-content text-lg max-w-prose">
+        Thank you for taking the time to read about my capabilities. To see a
+        concrete example of my work in practice, start with my latest project.
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <LinkButton
+          href="/professional-project/beraborrow-yarifi/"
+          variant="primary"
+          icon="open-book"
+        >
+          View Beraborrow & YariFi project
+        </LinkButton>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+/* Search bar */
+
+site-search button[data-open-modal] {
+  @apply text-neutral-light min-[50rem]:border-neutral-dark min-[50rem]:bg-neutral-light min-[50rem]:text-dark min-[50rem]:hover:border-neutral-dark min-[50rem]:hover:text-dark min-[50rem]:[&>kbd]:bg-neutral-dark;
+}
+
+site-search dialog {
+  @apply bg-neutral-light text-dark;
+}

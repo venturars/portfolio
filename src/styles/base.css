@@ -1,0 +1,47 @@
+/* Body and base typography — Lato for text, Playfair Display for titles */
+
+body {
+  @apply bg-neutral-light text-dark font-lato;
+}
+
+/* Titles — Playfair Display */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6,
+.sl-markdown-content h1 span,
+.sl-markdown-content h2 span,
+.sl-markdown-content h3 span,
+.sl-markdown-content h4 span,
+.sl-markdown-content h5 span,
+.sl-markdown-content h6 span,
+.sl-markdown-content h1 a,
+.sl-markdown-content h2 a,
+.sl-markdown-content h3 a,
+.sl-markdown-content h4 a,
+.sl-markdown-content h5 a,
+.sl-markdown-content h6 a,
+.sidebar-content a,
+.header .title-wrapper a {
+  @apply font-playfair text-dark;
+}
+
+/* More air between content elements */
+.content-panel .sl-markdown-content h2 {
+  @apply mt-10 mb-4;
+}
+
+.content-panel .sl-markdown-content h3 {
+  @apply mt-10 mb-6;
+}
+
+.content-panel .sl-markdown-content h2 + *,
+.content-panel .sl-markdown-content h3 + * {
+  @apply mt-2;
+}
+
+.content-panel .card-grid {
+  @apply mt-8;
+}

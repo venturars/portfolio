@@ -1,0 +1,5 @@
+/* Navbar */
+
+.header {
+  @apply border-b-0;
+}

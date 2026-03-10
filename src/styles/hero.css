@@ -1,0 +1,53 @@
+/* Hero — text-first design, photo as accent */
+
+.hero {
+  @apply py-6 pb-8;
+
+  @variant lg {
+    @apply grid-cols-[1fr_auto] items-start py-8 pb-10 gap-8;
+  }
+}
+
+.hero h1,
+.hero__title {
+  @apply font-playfair text-dark text-2xl leading-snug;
+
+  @variant lg {
+    @apply text-[1.75rem];
+  }
+}
+
+.hero .tagline,
+.hero__tagline {
+  @apply text-primary-content;
+}
+
+/* Photo as accent — smaller than default, but visible */
+.hero > img,
+.hero > picture,
+.hero > .hero-html,
+.hero > .hero-html img {
+  @apply rounded-xl overflow-hidden object-cover aspect-square w-48;
+}
+
+.hero > picture img {
+  @apply w-full h-full object-cover;
+
+  @variant lg {
+    @apply w-48 h-48;
+  }
+}
+
+.hero > img,
+.hero > picture,
+.hero > .hero-html {
+  @variant lg {
+    @apply order-2 w-48 min-w-48;
+  }
+}
+
+.hero__media img,
+.hero__media .hero__html,
+.hero__media .hero__html img {
+  @apply rounded-full overflow-hidden;
+}

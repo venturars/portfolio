@@ -1,0 +1,107 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+
+const { src, alt, class: className = "" } = Astro.props;
+const id = `lightbox-${Math.random().toString(36).slice(2, 11)}`;
+---
+
+<div class:list={["image-lightbox", className]}>
+  <button
+    type="button"
+    class="lightbox-trigger block rounded-lg overflow-hidden shadow-sm w-full cursor-default sm:cursor-pointer border-0 p-0 bg-transparent text-left"
+    aria-label={`View full size: ${alt}`}
+    data-lightbox-trigger
+  >
+    <img src={src} alt={alt} class="w-full block" />
+  </button>
+
+  <div
+    id={id}
+    class="lightbox-modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image preview"
+    data-lightbox-modal
+  >
+    <button
+      type="button"
+      class="lightbox-close absolute top-4 right-4 z-10 size-12 flex items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors border-0 cursor-pointer"
+      aria-label="Close"
+      data-lightbox-close
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </button>
+    <img
+      src={src}
+      alt={alt}
+      class="max-w-full max-h-[75vh] object-contain rounded-lg"
+      data-lightbox-image
+    />
+  </div>
+</div>
+
+<script>
+  function initLightbox(container: HTMLElement) {
+    if (container.hasAttribute("data-lightbox-initialized")) return;
+    container.setAttribute("data-lightbox-initialized", "true");
+
+    const trigger = container.querySelector("[data-lightbox-trigger]");
+    const modal = container.querySelector("[data-lightbox-modal]") as HTMLElement;
+    const closeBtn = container.querySelector("[data-lightbox-close]");
+
+    if (!trigger || !modal) return;
+
+    const open = () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+      modal.focus();
+    };
+
+    const close = () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "";
+    };
+
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (!window.matchMedia("(min-width: 640px)").matches) return;
+      open();
+    });
+
+    closeBtn?.addEventListener("click", close);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        close();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+  }
+
+  function initAllLightboxes() {
+    document.querySelectorAll(".image-lightbox").forEach((el) =>
+      initLightbox(el as HTMLElement)
+    );
+  }
+
+  initAllLightboxes();
+  document.addEventListener("astro:page-load", initAllLightboxes);
+</script>
+
+<style>
+  .lightbox-modal {
+    backdrop-filter: blur(4px);
+  }
+</style>

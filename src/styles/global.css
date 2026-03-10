@@ -1,0 +1,28 @@
+@layer base, starlight, theme, components, utilities;
+
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+
+@theme {
+  /* Disable Tailwind defaults; use only custom values below */
+  --color-*: initial;
+  --font-*: initial;
+  /* Custom fonts */
+  --font-lato: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  /* Theme colors — reference CSS variables from :root */
+  --color-primary: var(--primary);
+  --color-primary-content: var(--primary-content);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-neutral: var(--neutral);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-light: var(--neutral-light);
+  --color-dark: var(--dark);
+  --color-light: var(--light);
+  --color-white: var(--white);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-info: var(--info);
+}
+@import "tailwindcss/utilities.css" layer(utilities);

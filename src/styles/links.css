@@ -1,0 +1,41 @@
+/* Link styles */
+
+/* Inline links in prose content */
+.content-panel .sl-markdown-content a {
+  @apply text-accent underline decoration-accent underline-offset-2 transition-colors hover:text-primary-content hover:decoration-accent;
+}
+
+/* LinkCard — match pagination prev/next button styles */
+.content-panel .sl-link-card {
+  @apply bg-neutral text-secondary rounded-xl shadow-sm;
+}
+
+.content-panel .sl-link-card a {
+  @apply no-underline;
+}
+
+.content-panel .sl-link-card .title {
+  @apply font-playfair text-secondary;
+}
+
+.content-panel .sl-link-card .description {
+  @apply text-secondary;
+}
+
+.content-panel .sl-link-card .icon {
+  @apply text-secondary;
+}
+
+.content-panel .sl-link-card:hover,
+.content-panel .sl-link-card:focus-within {
+  @apply text-accent bg-light;
+}
+
+.content-panel .sl-link-card:hover .title,
+.content-panel .sl-link-card:hover .description,
+.content-panel .sl-link-card:hover .icon,
+.content-panel .sl-link-card:focus-within .title,
+.content-panel .sl-link-card:focus-within .description,
+.content-panel .sl-link-card:focus-within .icon {
+  @apply text-accent;
+}
