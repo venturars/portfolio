@@ -1,9 +1,76 @@
-/* Search bar */
-
+/* Search bar — navbar trigger */
 site-search button[data-open-modal] {
   @apply text-neutral-light min-[50rem]:border-neutral-dark min-[50rem]:bg-neutral-light min-[50rem]:text-dark min-[50rem]:hover:border-neutral-dark min-[50rem]:hover:text-dark min-[50rem]:[&>kbd]:bg-neutral-dark;
 }
 
+/* Search modal — overlay and frame */
 site-search dialog {
-  @apply bg-neutral-light text-dark;
+  @apply bg-neutral-light text-dark border-neutral-dark;
+}
+
+site-search dialog::backdrop {
+  @apply backdrop-blur-sm;
+}
+
+/* Pagefind UI — match portfolio light theme */
+#starlight__search {
+  --pagefind-ui-primary: var(--primary);
+  --pagefind-ui-text: var(--dark);
+  --pagefind-ui-background: var(--white);
+  --pagefind-ui-border: var(--neutral-dark);
+  --pagefind-ui-tag: var(--neutral);
+}
+
+#starlight__search .pagefind-ui__search-input {
+  color: var(--dark);
+}
+
+#starlight__search input:focus {
+  --pagefind-ui-border: var(--primary);
+}
+
+#starlight__search .pagefind-ui__search-clear:focus {
+  outline-color: var(--primary);
+}
+
+#starlight__search .pagefind-ui__form::before {
+  --pagefind-ui-text: var(--dark);
+}
+
+#starlight__search .pagefind-ui__search-clear::before {
+  background-color: var(--dark);
+}
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)),
+#starlight__search .pagefind-ui__result-nested {
+  background-color: var(--neutral-light);
+}
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):hover,
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
+#starlight__search .pagefind-ui__result-nested:hover,
+#starlight__search .pagefind-ui__result-nested:focus-within {
+  outline-color: var(--primary);
+}
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
+#starlight__search .pagefind-ui__result-nested:focus-within {
+  background-color: var(--neutral);
+}
+
+#starlight__search .pagefind-ui__result-link {
+  --pagefind-ui-text: var(--dark);
+}
+
+#starlight__search .pagefind-ui__result-tags {
+  background-color: var(--neutral-light);
+}
+
+#starlight__search mark {
+  color: var(--primary-content);
+  background-color: transparent;
+}
+
+#starlight__search .pagefind-ui__message {
+  color: var(--dark);
 }
