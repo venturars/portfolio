@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio personal construido con `Astro` y `Starlight`, orientado a presentar experiencia profesional en formato de documentación y case studies.
+Personal portfolio built with `Astro` and `Starlight`, designed to present professional experience in a documentation and case study format.
 
 ## Stack
 
@@ -10,16 +10,16 @@ Portfolio personal construido con `Astro` y `Starlight`, orientado a presentar e
 - `astro-mermaid`
 - `starlight-showcases`
 
-## Desarrollo
+## Development
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Servidor local habitual: [http://localhost:4321](http://localhost:4321)
+Local server: [http://localhost:4321](http://localhost:4321)
 
-Otros comandos útiles:
+Other useful commands:
 
 ```bash
 pnpm build
@@ -27,7 +27,7 @@ pnpm preview
 pnpm astro -- --help
 ```
 
-## Estructura principal
+## Main structure
 
 ```text
 .
@@ -44,17 +44,17 @@ pnpm astro -- --help
 └── package.json
 ```
 
-## Dónde editar
+## Where to edit
 
-- `src/content/docs/index.mdx`: portada del portfolio.
-- `src/content/docs/professional-project/`: proyectos principales.
-- `src/content/docs/instructor-experience/`: experiencias de docencia.
-- `src/components/`: overrides y componentes personalizados.
-- `src/styles/`: estilos globales y secciones visuales.
-- `astro.config.mjs`: sidebar, enlaces sociales, favicon e integraciones.
+- `src/content/docs/index.mdx`: portfolio homepage.
+- `src/content/docs/professional-project/`: main project case studies.
+- `src/content/docs/instructor-experience/`: teaching experience pages.
+- `src/components/`: custom components and overrides.
+- `src/styles/`: global styles and visual section styles.
+- `astro.config.mjs`: sidebar, social links, favicon, and integrations.
 
-## Notas
+## Notes
 
-- El contenido se publica desde `src/content/docs` usando colecciones de Starlight.
-- Las páginas de proyectos usan `MDX`, imágenes locales y, en algunos casos, diagramas Mermaid y showcases enriquecidos.
-- La sección de `instructor-experience` existe en el repositorio, pero ahora mismo no está visible en la sidebar.
+- Content is published from `src/content/docs` using Starlight collections.
+- Project pages use `MDX`, local images, and in some cases Mermaid diagrams and rich showcases.
+- The `instructor-experience` section exists in the repository, but it is not currently visible in the sidebar.
