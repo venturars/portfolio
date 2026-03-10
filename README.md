@@ -1,49 +1,60 @@
-# Starlight Starter Kit: Basics
+# Portfolio
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Portfolio personal construido con `Astro` y `Starlight`, orientado a presentar experiencia profesional en formato de documentación y case studies.
 
+## Stack
+
+- `Astro`
+- `@astrojs/starlight`
+- `Tailwind CSS`
+- `astro-mermaid`
+- `starlight-showcases`
+
+## Desarrollo
+
+```bash
+pnpm install
+pnpm dev
 ```
-pnpm create astro@latest -- --template starlight
+
+Servidor local habitual: [http://localhost:4321](http://localhost:4321)
+
+Otros comandos útiles:
+
+```bash
+pnpm build
+pnpm preview
+pnpm astro -- --help
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Estructura principal
 
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
+```text
 .
 ├── public/
 ├── src/
 │   ├── assets/
+│   ├── components/
 │   ├── content/
 │   │   └── docs/
+│   ├── pages/
+│   ├── styles/
 │   └── content.config.ts
 ├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+└── package.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Dónde editar
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+- `src/content/docs/index.mdx`: portada del portfolio.
+- `src/content/docs/professional-project/`: proyectos principales.
+- `src/content/docs/instructor-experience/`: experiencias de docencia.
+- `src/components/`: overrides y componentes personalizados.
+- `src/styles/`: estilos globales y secciones visuales.
+- `astro.config.mjs`: sidebar, enlaces sociales, favicon e integraciones.
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Notas
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- El contenido se publica desde `src/content/docs` usando colecciones de Starlight.
+- Las páginas de proyectos usan `MDX`, imágenes locales y, en algunos casos, diagramas Mermaid y showcases enriquecidos.
+- La sección de `instructor-experience` existe en el repositorio, pero ahora mismo no está visible en la sidebar.
