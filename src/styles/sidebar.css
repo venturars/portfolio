@@ -1,7 +1,7 @@
 /* Sidebar */
 
 .sidebar-pane {
-  @apply border-e-0 bg-linear-to-r from-neutral from-98% to-neutral-dark to-100% z-auto;
+  @apply border-e-0 bg-linear-to-r from-neutral from-98% to-neutral-dark to-100% sm:z-auto;
 }
 
 .sidebar-content .large {
