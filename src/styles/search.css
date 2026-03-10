@@ -6,10 +6,19 @@ site-search button[data-open-modal] {
 /* Search modal — overlay and frame */
 site-search dialog {
   @apply bg-neutral-light text-dark border-neutral-dark;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+@media (min-width: 50rem) {
+  site-search dialog {
+    border-radius: 0.75rem;
+  }
 }
 
 site-search dialog::backdrop {
-  @apply backdrop-blur-sm;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgb(0 0 0 / 0.2);
 }
 
 /* Pagefind UI — match portfolio light theme */
@@ -19,10 +28,19 @@ site-search dialog::backdrop {
   --pagefind-ui-background: var(--white);
   --pagefind-ui-border: var(--neutral-dark);
   --pagefind-ui-tag: var(--neutral);
+  --pagefind-ui-border-radius: 0.5rem;
+  --pagefind-ui-border-width: 1px;
+  font-family: var(--sl-font);
 }
 
 #starlight__search .pagefind-ui__search-input {
   color: var(--dark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#starlight__search .pagefind-ui__search-input:focus {
+  box-shadow: 0 0 0 2px var(--primary);
+  outline: none;
 }
 
 #starlight__search input:focus {
@@ -41,16 +59,27 @@ site-search dialog::backdrop {
   background-color: var(--dark);
 }
 
+/* Results count */
+#starlight__search .pagefind-ui__message {
+  color: var(--primary-content);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+/* Result items — smoother hover and separation */
 #starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)),
 #starlight__search .pagefind-ui__result-nested {
   background-color: var(--neutral-light);
+  transition: background-color 0.15s ease, outline-color 0.15s ease;
+  border-radius: 0.375rem;
 }
 
 #starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):hover,
 #starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
 #starlight__search .pagefind-ui__result-nested:hover,
 #starlight__search .pagefind-ui__result-nested:focus-within {
-  outline-color: var(--primary);
+  outline: 1px solid var(--primary);
+  outline-offset: -1px;
 }
 
 #starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
@@ -60,17 +89,20 @@ site-search dialog::backdrop {
 
 #starlight__search .pagefind-ui__result-link {
   --pagefind-ui-text: var(--dark);
+  font-family: var(--sl-font-heading);
+}
+
+#starlight__search .pagefind-ui__result-excerpt {
+  color: var(--primary-content);
+  opacity: 0.9;
 }
 
 #starlight__search .pagefind-ui__result-tags {
-  background-color: var(--neutral-light);
+  background-color: transparent;
 }
 
 #starlight__search mark {
   color: var(--primary-content);
   background-color: transparent;
-}
-
-#starlight__search .pagefind-ui__message {
-  color: var(--dark);
+  font-weight: 600;
 }
