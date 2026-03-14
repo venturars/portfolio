@@ -105,13 +105,26 @@ export default defineConfig({
             },
           ],
         },
-        // {
-        //   label: "Instructor Experiences",
-        //   items: [
-        //     { label: "Neoland", slug: "instructor-experience/neoland" },
-        //     { label: "ISDI Coders", slug: "instructor-experience/isdicoders" },
-        //   ],
-        // },
+        {
+          label: "Instructor Experiences",
+          items: [
+            { label: "Neoland", slug: "instructor-experience/neoland" },
+            { label: "ISDI Coders", slug: "instructor-experience/isdicoders" },
+          ],
+        },
+        {
+          label: "About",
+          items: [
+            {
+              label: "About this portfolio",
+              slug: "about/about-this-portfolio",
+            },
+            {
+              label: "Feedback & Contributions",
+              slug: "about/feedback-contributions",
+            },
+          ],
+        },
       ],
     }),
   ],

@@ -4,6 +4,10 @@ body {
   @apply bg-neutral-light text-dark font-lato;
 }
 
+.site-title {
+  @apply font-playfair! text-primary-content!;
+}
+
 /* Titles — Playfair Display */
 .sl-markdown-content h1,
 .sl-markdown-content h2,
