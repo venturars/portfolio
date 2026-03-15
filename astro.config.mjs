@@ -108,8 +108,8 @@ export default defineConfig({
         {
           label: "Instructor Experiences",
           items: [
-            { label: "Neoland", slug: "instructor-experience/neoland" },
             { label: "ISDI Coders", slug: "instructor-experience/isdicoders" },
+            { label: "Neoland", slug: "instructor-experience/neoland" },
           ],
         },
         {
